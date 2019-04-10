@@ -45,6 +45,9 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.src= "img/logo.png"
 
+
+let snippet = document.getElementById("cta-img");
+snippet.src= "img/header-img.png"
 //select and alter NAV
 
 // let nav = document.getElementsByClassName("nav");
@@ -56,9 +59,23 @@ logo.src= "img/logo.png"
 //nav.textContent=
 const navas= document.querySelectorAll("a")
 console.log(navas);
-navas.forEach(function(element) {
-  console.log(element);
-});
+
+navas[0].textContent="Servicesicios"
+navas[1].textContent="Product"
+navas[2].textContent="Vision"
+navas[3].textContent="Features"
+navas[4].textContent="About"
+
+
+// navas.forEach(function(element) {
+//   element.textContent="";
+// });
+
+//for each on navas
+//obeject keys. sitecontent.nav.nav-item 1 ??
+//nested for loop?
+//objec.keys to automate getting them?
+
 // navas.forEach(element.textContent=`${nav.element}`);
 
 
