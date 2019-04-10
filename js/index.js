@@ -45,3 +45,21 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.src= "img/logo.png"
 
+//select and alter NAV
+
+// let nav = document.getElementsByClassName("nav");
+// console.log(nav);
+
+// let nav1= document.getElementById("nav-item-1");
+// nav1.textContent("Services")
+
+//nav.textContent=
+const navas= document.querySelectorAll("a")
+console.log(navas);
+navas.forEach(function(element) {
+  console.log(element);
+});
+// navas.forEach(element.textContent=`${nav.element}`);
+
+
+
