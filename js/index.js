@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM <br> Is <br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -42,41 +42,50 @@ const siteContent = {
 // logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //tested alternate method
+//LOGO
 let logo = document.getElementById("logo-img");
-logo.src= "img/logo.png"
+//logo.src= "img/logo.png"   DONT DO THIS
+logo.src=siteContent["nav"]["img-src"]
 
-
-let snippet = document.getElementById("cta-img");
-snippet.src= "img/header-img.png"
 //select and alter NAV
 
-// let nav = document.getElementsByClassName("nav");
-// console.log(nav);
-
-// let nav1= document.getElementById("nav-item-1");
-// nav1.textContent("Services")
-
-//nav.textContent=
 const navas= document.querySelectorAll("a")
 console.log(navas);
 
-navas[0].textContent="Servicesicios"
-navas[1].textContent="Product"
-navas[2].textContent="Vision"
-navas[3].textContent="Features"
-navas[4].textContent="About"
+navas[0].textContent=siteContent["nav"]["nav-item-1"]
+navas[1].textContent=siteContent["nav"]["nav-item-2"]
+navas[2].textContent=siteContent["nav"]["nav-item-3"]
+navas[3].textContent=siteContent["nav"]["nav-item-4"]
+navas[4].textContent=siteContent["nav"]["nav-item-5"]
+
+const headline= document.querySelector('h1');
+headline.innerHTML=siteContent["cta"]["h1"]
 
 
-// navas.forEach(function(element) {
-//   element.textContent="";
-// });
+//   CTA / "button": "Get Started",
 
-//for each on navas
-//obeject keys. sitecontent.nav.nav-item 1 ??
-//nested for loop?
-//objec.keys to automate getting them?
+const button= document.querySelector('button');
+button.textContent=siteContent["cta"]["button"]
 
-// navas.forEach(element.textContent=`${nav.element}`);
+//CIRCLE IMAGE
+let snippet = document.getElementById("cta-img");
+snippet.src= siteContent["cta"]["img-src"]
+//my first attempt at doing this I was copy pasting
+//the actual value ie "img/header-img.png"
+//instead of calling the actual value from the object
+
+//CODE SNIPPTED ACRROSS SCREEN
+let midCode= document.getElementById("middle-img");
+midCode.src= siteContent["main-content"]["middle-img-src"]
+
+
+
+
+// "cta": {
+//   "h1": "DOM <br> Is <br> Awesome",
+//   "button": "Get Started",
+//   "img-src": "img/header-img.png"
+// },
 
 
 
