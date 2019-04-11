@@ -9,21 +9,21 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM <br> Is <br> Awesome",
+    "h1": "DOM <br> Is <br> CRUSHING MY SOUL",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
   "main-content": {
-    "features-h4":"Features",
+    "features-h4":"Features",  // LINE 48
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "about-h4":"About",
+    "about-h4":"About", //
     "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "middle-img-src": "img/mid-page-accent.jpg",
-    "services-h4":"Services",
+    "services-h4":"Services", //
     "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "product-h4":"Product",
+    "product-h4":"Product", //
     "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "vision-h4":"Vision",
+    "vision-h4":"Vision", //
     "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
   },
   "contact": {
@@ -45,12 +45,12 @@ const siteContent = {
 //LOGO
 let logo = document.getElementById("logo-img");
 //logo.src= "img/logo.png"   DONT DO THIS
-logo.src=siteContent["nav"]["img-src"]
+logo.src=siteContent["nav"]["img-src"]  //Do THIS instead
 
 //select and alter NAV
 
 const navas= document.querySelectorAll("a")
-console.log(navas);
+//console.log(navas);
 
 navas[0].textContent=siteContent["nav"]["nav-item-1"]
 navas[1].textContent=siteContent["nav"]["nav-item-2"]
@@ -74,18 +74,38 @@ snippet.src= siteContent["cta"]["img-src"]
 //the actual value ie "img/header-img.png"
 //instead of calling the actual value from the object
 
-//CODE SNIPPTED ACRROSS SCREEN
+//CODE SNIPPET ACRROSS SCREEN
 let midCode= document.getElementById("middle-img");
 midCode.src= siteContent["main-content"]["middle-img-src"]
 
+//class Text content
+
+let textStuff= document.getElementsByClassName("text-content");
+console.log(textStuff);
+
+textStuff
 
 
+// "main-content": {
+//   "features-h4":"Features",
 
-// "cta": {
-//   "h1": "DOM <br> Is <br> Awesome",
-//   "button": "Get Started",
-//   "img-src": "img/header-img.png"
-// },
+let fText= document.querySelectorAll("h4");
+//fText.forEach(siteContent.textContent=)
+
+fText[0].textContent=siteContent["main-content"]["features-h4"]
+fText[1].textContent=siteContent["main-content"]["about-h4"]
+fText[2].textContent=siteContent["main-content"]["services-h4"]
+fText[3].textContent=siteContent["main-content"]["product-h4"]
+fText[4].textContent=siteContent["main-content"]["vision-h4"]
+fText[5].textContent=siteContent["contact"]["contact-h4"]
+
+console.log(fText);
+
+//NEXT ACTION ITEM
 
 
+let pText = //SEE LINE 92 then line 106
 
+//JIMMY /ERNESTO FOR LOOP
+//const navItems = document.querySelectorAll('a')
+//navItems.forEach((value, index) => {value.innerText = siteContent["nav"][`nav-item-${index++}`]})
