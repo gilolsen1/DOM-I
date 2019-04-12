@@ -68,6 +68,27 @@ navas[3].style.color='green';
 navas[4].style.color='green';
 
 //append and prepend
+const navItem=document.querySelector("nav");  //NEED create querry selector for the PARENT (not sibling)
+const newItem1= "Portfolio";
+navItem.append(newItem1);
+
+//navas.prepend(child2) 
+const newItem2="EasterEggs!";
+navItem.prepend(newItem2);
+
+// nav[0].style.color='green';
+// nav[1].style.color='green';
+
+// //These methods are used for adding child elements to parent elements. 
+// //will take an element and add it to it children. It will add it to the ‘end’ physically so if the children are displayed in order it will be the last.
+// //eg: parentElement.appendChild(childElement)
+//             //adds a child to the beginning, displaying it first.
+// eq: parentElement.prepend(childElement)
+
+
+
+
+
 
 
 //navas.forEach((color, index) => {value.innerText = siteContent["p"][`nav-item-${index++}`]})
