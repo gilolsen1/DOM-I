@@ -36,6 +36,7 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////END OF OBJECT
 
 // Example: Update the img src for the logo
 // let logo = document.getElementById("logo-img");
@@ -58,6 +59,22 @@ navas[2].textContent=siteContent["nav"]["nav-item-3"]
 navas[3].textContent=siteContent["nav"]["nav-item-4"]
 navas[4].textContent=siteContent["nav"]["nav-item-5"]
 
+///////
+//ALTER color
+navas[0].style.color='green';
+navas[1].style.color='green';
+navas[2].style.color='green';
+navas[3].style.color='green';
+navas[4].style.color='green';
+
+//append and prepend
+
+
+//navas.forEach((color, index) => {value.innerText = siteContent["p"][`nav-item-${index++}`]})
+// navas.forEach(cb)
+
+//style.color='green';
+
 const headline= document.querySelector('h1');
 headline.innerHTML=siteContent["cta"]["h1"]
 
@@ -66,6 +83,10 @@ headline.innerHTML=siteContent["cta"]["h1"]
 
 const button= document.querySelector('button');
 button.textContent=siteContent["cta"]["button"]
+
+//element.addEventListener('click', (event) => { event.target.style.backgroundColor = 'blue'; });
+button.addEventListener('click', (event) => {event.target.style.backgroundColor = 'teal';});
+button.addEventListener('contextmenu', (event) => {event.target.style.backgroundColor = 'red';});
 
 //CIRCLE IMAGE
 let snippet = document.getElementById("cta-img");
@@ -99,13 +120,42 @@ fText[3].textContent=siteContent["main-content"]["product-h4"]
 fText[4].textContent=siteContent["main-content"]["vision-h4"]
 fText[5].textContent=siteContent["contact"]["contact-h4"]
 
-console.log(fText);
+//console.log(fText);
 
 //NEXT ACTION ITEM
 
 
-let pText = //SEE LINE 92 then line 106
+//SEE LINE 92 then line 106
 
 //JIMMY /ERNESTO FOR LOOP
 //const navItems = document.querySelectorAll('a')
-//navItems.forEach((value, index) => {value.innerText = siteContent["nav"][`nav-item-${index++}`]})
+//pText.forEach((value, index) => {value.innerText = siteContent["p"][`nav-item-${index++}`]})
+//my only thought would be to make an if statement to create an array of the keys that contain "content", 
+//then use the loop on those, but even then you'd need multiple ones for the section selectors.  
+//Probably WAY to complicated for this application. 
+//Maybe if there were 1000 of them.  I'm going to just bang that part out manually to get it done.
+
+
+let pText= document.querySelectorAll("p");
+
+//console.log(pText);
+
+pText[0].textContent=siteContent["main-content"]["features-content"]
+pText[1].textContent=siteContent["main-content"]["about-content"]
+pText[2].textContent=siteContent["main-content"]["services-content"]
+pText[3].textContent=siteContent["main-content"]["product-content"]
+pText[4].textContent=siteContent["main-content"]["vision-content"]
+pText[5].textContent=siteContent["contact"]["address"]
+pText[6].textContent=siteContent["contact"]["phone"]
+pText[7].textContent=siteContent["contact"]["email"]
+pText[8].textContent=siteContent["footer"]["copyright"]
+pText[9].textContent=siteContent["main-content"]["vision-content"]
+
+
+
+//
+
+// ## Task 3: Add new content
+// * [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. 
+//You can call them whatever you want.
+// * [ ] Check your work by looking at the [original html](original.html) in the browser
